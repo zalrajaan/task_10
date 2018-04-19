@@ -67,6 +67,13 @@ def restaurant_create(request):
     }
     return render(request, 'create.html', context)
 
+def item_create(request):
+
+    context = {
+        
+    }
+    return render(request, 'item_create.html', context)
+
 def restaurant_update(request, restaurant_id):
     restaurant_obj = Restaurant.objects.get(id=restaurant_id)
     form = RestaurantForm(instance=restaurant_obj)
